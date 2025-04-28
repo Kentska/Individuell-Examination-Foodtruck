@@ -61,6 +61,9 @@ const addToCart = (item: MenuItem) => {
     <div className="menu-page">
       <div className="background_image">
         <img src="/mmm 1.png" alt="bg" />
+		<div className="img-yygs">
+          <img src="/Group 6.png" alt="yygs" />
+        </div>
         {/* NavigationButton är placerad här */}
         <div className="navigation-button-wrapper">
           <NavigationButton target="/cart" icon={unionIcon} />
