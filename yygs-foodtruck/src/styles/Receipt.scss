@@ -1,0 +1,272 @@
+// Stilar för kvitto
+
+.receipt-page {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: white;
+}
+
+.receipt-container {
+	width: 390px;
+	height: 844px;
+	border-radius: 8px;
+	background-color: #605858;
+	border: solid #f4f3f1;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+
+}
+.receipt-header {
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	position: relative;
+}
+
+.img-yygs {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	width: 64px;
+	height: 64px;
+}
+.receipt-content {
+	background-color: #EEEEEE;
+	width: 100%;
+	max-width:358px;
+	height:467px;
+	flex-grow:1;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	text-align:left;
+	overflow-y: auto;
+	margin-top: 100px;
+	padding:10px;
+	box-sizing: border-box;
+}
+.logo {
+	width: 100%;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 50px;
+}
+
+
+.receipt-loading,
+.receipt-error {
+	font-size: 16px;
+	color: red;
+	margin-bottom: 10px;
+}
+
+.receipt-details {
+	width: 100%;
+}
+
+.receipt-title {
+	font-size: 24px;
+	color: #333;
+	// margin-bottom: 10px;
+	display: flex;
+	justify-content: center;
+	margin: 0px;
+	margin-top: 30px;
+	padding: 0px;
+}
+
+.receipt-time {
+	display: none;
+	/* Dölj elementet */
+}
+
+.receipt-id {
+	font-size: 12px;
+	font-weight: bold;
+	display: flex;
+	justify-content: center;
+	color: #333;
+	margin:0;
+}
+
+.receipt-items-title {
+	font-size: 20px;
+	color: #333;
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+
+
+.receipt-items-list {
+	list-style-type: none;
+	/* Ta bort standardpunkter */
+	padding: 0;
+	margin: 0;
+}
+
+
+.receipt-item {
+	display: flex;
+	/* Gör varje kvittopost till en flexbox */
+	justify-content: space-between;
+	/* Placera vänster och höger innehåll på varsin sida */
+	align-items: center;
+	/* Centrera innehållet vertikalt */
+	padding: 10px 0;
+	/* Lägg till mellanrum mellan poster */
+	font-size: 16px;
+	/* Justera textstorleken */
+	color: #333;
+	/* Textfärg */
+	position: relative;
+	/* Behövs för att placera linjen */
+}
+
+.receipt-item::after {
+	content: "";
+	/* Skapa en linje */
+	position: absolute;
+	top: 50%;
+	/* Centrera linjen vertikalt */
+	left: calc(20%);
+	right: calc(20%);
+	height: 1px;
+	/* Tjocklek på linjen */
+	background-color: #ccc;
+	/* Färg på linjen */
+	z-index: 0;
+	/* Placera linjen bakom texten */
+}
+
+.receipt-item-left,
+.receipt-item-right {
+	position: relative;
+	/* Behövs för att linjen inte ska överlappa texten */
+	z-index: 1;
+	/* Placera texten ovanpå linjen */
+}
+
+.receipt-item-left {
+	display: flex;
+	flex-direction: column;
+	/* Placera namnet och kvantiteten vertikalt */
+}
+
+.receipt-item-name {
+	font-weight: bold;
+	/* Gör namnet fetstil */
+	margin-bottom: 5px;
+	/* Lägg till mellanrum under namnet */
+}
+
+.receipt-item-quantity {
+	font-size: 12px;
+	/* Mindre textstorlek för kvantiteten */
+	color: #555;
+	/* Annan färg för kvantiteten */
+}
+
+.receipt-item-right {
+	font-weight: bold;
+	/* Gör priset fetstil */
+	color: #333;
+	/* Textfärg för priset */
+}
+
+.receipt-no-items {
+	font-size: 16px;
+	color: #999;
+}
+
+.receipt-footer {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 20px;
+}
+
+.receipt-total-box {
+	background-color: #35313135;
+	width: 100%;
+	padding: 10px 15px;
+	/* Inre marginal för boxen */
+	margin-top: auto;
+	/* Placera boxen längst ner i .receipt-content */
+	border: 1px solid #ccc;
+	/* Skapa en kant runt boxen */
+	border-radius: 8px;
+	/* Rundade hörn */
+	/* Ljus bakgrundsfärg */
+	display: flex;
+	/* Flexbox för att justera innehållet */
+	justify-content: space-between;
+	/* Placera texten och beloppet på varsin sida */
+	align-items: center;
+	/* Centrera innehållet vertikalt */
+	box-sizing: border-box;
+	/* Inkludera padding i bredden */
+}
+
+.receipt-total-text {
+	display: flex;
+	flex-direction: column;
+	/* Placera "Totalt" och "inkl 20% moms" vertikalt */
+}
+
+.receipt-total {
+	font-size: 16px;
+	/* Textstorlek för "Totalt" */
+	font-weight: bold;
+	/* Fetstil för "Totalt" */
+	color: #333;
+	/* Textfärg */
+}
+
+.receipt-tax {
+	font-size: 14px;
+	/* Mindre textstorlek för "inkl 20% moms" */
+	color: #555;
+	/* Annan färg för "inkl 20% moms" */
+	margin-top: 2px;
+	/* Litet mellanrum ovanför "inkl 20% moms" */
+}
+
+.receipt-total-amount {
+	font-size: 16px;
+	/* Textstorlek för beloppet */
+	font-weight: bold;
+	/* Fetstil för beloppet */
+	color: #333;
+	/* Textfärg */
+}
+
+.receipt-navigation-button {
+	width: 100%;
+	max-width: 390px;
+	height: 77px;
+	text-align: center;
+	justify-content: center;
+	font-size: 24px;
+	color: #f4f3f1;
+	background-color: #353131;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.receipt-navigation-button:hover {
+	background-color: rgba(0, 0, 0, 0.8);
+}

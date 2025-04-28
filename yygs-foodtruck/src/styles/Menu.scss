@@ -1,0 +1,286 @@
+// Stilar för meny
+
+body {
+	background-color: white; 
+	margin: 0; 
+	padding: 0;
+}
+
+.menu-page {
+	position: relative;
+	width: 100%;
+	height: 100vh; 
+	display: flex; 
+	justify-content: center; 
+	align-items: center; 
+	background-color: white; 
+}
+
+.background_image {
+	position: relative;
+	width: 390px; 
+	height: 844px; 
+	object-fit: cover; 
+	background-color: #8ED8BF;
+}
+
+
+.navigation-button-wrapper .navigation-button {
+	position: absolute;
+	background: none;
+	border: none;
+	cursor: pointer;
+	top: 10px;
+	right: 10px;
+}
+
+.navigation-button__icon {
+	width: 32px;
+	height:32px;
+}
+
+.badge {
+	position: absolute;
+	top: 10px; 
+	right: 10px; 
+	width: 24px; 
+	height: 24px; 
+	
+	background-color: red;
+	color: white;
+	font-size: 12px;
+	font-weight: bold;
+	border-radius: 50%; 
+	display: flex;
+	justify-content: center; 
+	align-items: center; 
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+}
+
+.menu-container {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 300px;
+	height:700px;
+	transform: translate(-50%, -50%);
+	background-color: #605858;
+	padding: 10px;
+	border-radius: 8px;
+	text-align: center;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+	overflow-y: auto;
+}
+
+.menu__title{
+font-size: 24px;
+	margin-bottom: 10px;
+	color: #f4f3f1;
+	display: flex;
+	margin-left:10px;
+}
+
+
+.menu-item {
+	margin-bottom: 2px;
+	padding: 5px;
+	border: 1px solid #737171;
+}
+
+.menu-item__header {
+	display: flex;
+	justify-content: space-between; 
+	align-items: center;
+	
+}
+
+.menu__name {
+	font-size: 12px;
+	font-weight: bold;
+	color: #f4f3f1;
+}
+
+.menu__price {
+	font-size: 12px;
+	font-weight: bold;
+	color: #f4f3f1;
+}
+
+.menu-item__ingredients {
+	font-size: 12px;
+	color: #f4f3f1;
+}
+
+
+.menu-section {
+	margin-bottom: 20px;
+}
+
+.menu-section__title {
+	font-size: 24px;
+	color: #fff;
+	margin-bottom: 15px;
+	text-align: center;
+}
+
+.menu-items {
+	display: flex;
+	flex-wrap: wrap;
+	/* Gör att boxarna radbryts om det behövs */
+	gap: 20px;
+	/* Avstånd mellan boxarna */
+	justify-content: center;
+	/* Centrera boxarna */
+}
+
+.menu-item {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 15px;
+	background-color: rgba(255, 255, 255, 0.1);
+	border: 2px solid #737171;
+	border-radius: 8px;
+	cursor: pointer;
+	/* Gör boxen klickbar */
+	transition: background-color 0.3s ease, transform 0.2s ease;
+	text-align: center;
+	width: 250px;
+	/* Fast bredd för boxarna */
+	height: 50px;
+	/* Fast höjd för boxarna */
+}
+
+.menu-item:hover {
+	background-color: rgba(255, 255, 255, 0.2);
+	/* Ändra bakgrundsfärg vid hover */
+	transform: scale(1.05);
+	/* Gör boxen lite större vid hover */
+}
+.menu-item__header {
+	display: flex;
+	justify-content: space-between;
+	/* Namn till vänster, pris till höger */
+	width: 100%;
+	/* Gör att innehållet fyller hela bredden */
+	margin-bottom: 10px;
+	/* Avstånd till ingredienserna */
+}
+
+.menu-item__name {
+	font-size: 16px;
+	color: #fff;
+	margin-bottom: 5px;
+}
+
+.menu-item__price {
+	font-size: 14px;
+	color: #fff;
+}
+
+/* Specifik layout för dip-sektionen */
+.menu-items--dip {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 15px;
+	/* Mindre avstånd mellan dip-boxarna */
+	justify-content: center;
+}
+
+/* Specifika stilar för dip-boxar */
+.menu-item--dip {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 10px;
+	/* Mindre padding för dip-boxar */
+	background-color: #605858;
+	/* Annan bakgrundsfärg */
+	border: 2px solid #f4f3f1;
+	/* Annan färg på ramen */
+	border-radius: 10px;
+	/* Rundare hörn */
+	cursor: pointer;
+	transition: background-color 0.3s ease, transform 0.2s ease;
+	text-align: center;
+	width: 50px;
+	/* Mindre bredd för dip-boxar */
+	height: 20px;
+	/* Mindre höjd för dip-boxar */
+}
+
+.menu-item--dip:hover {
+	background-color: rgba(255, 255, 255, 0.25);
+	/* Annan hover-effekt */
+	transform: scale(1.1);
+	/* Gör boxen större vid hover */
+}
+
+.menu-item--dip .menu-item__name {
+	font-size: 10px;
+	/* Mindre textstorlek för dip-namn */
+	color: #f4f3f1;
+	/* Annan färg för texten */
+	margin-bottom: 5px;
+}
+
+.menu-item--dip .menu-item__price {
+	font-size: 10px;
+	/* Mindre textstorlek för priset */
+	color: #f4f3f1;
+}
+
+/* Specifik layout för drink-sektionen */
+.menu-items--drink {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+	/* Avstånd mellan drink-boxarna */
+	justify-content: center;
+}
+
+/* Specifika stilar för drink-boxar */
+.menu-item--drink {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 12px;
+	/* Anpassad padding för drink-boxar */
+	background-color: #605858;
+	/* Annan bakgrundsfärg */
+	border: 2px solid #f4f3f1;
+	/* Annan färg på ramen */
+	border-radius: 12px;
+	/* Rundare hörn */
+	cursor: pointer;
+	transition: background-color 0.3s ease, transform 0.2s ease;
+	text-align: center;
+	width: 50px;
+	/* Anpassad bredd för drink-boxar */
+	height: 20px;
+	/* Anpassad höjd för drink-boxar */
+}
+
+.menu-item--drink:hover {
+	background-color: rgba(0, 128, 255, 0.25);
+	/* Annan hover-effekt */
+	transform: scale(1.1);
+	/* Gör boxen större vid hover */
+}
+
+.menu-item--drink .menu-item__name {
+	font-size: 10px;
+	/* Anpassad textstorlek för drink-namn */
+	color: #f4f3f1;
+	/* Annan färg för texten */
+	margin-bottom: 5px;
+}
+
+.menu-item--drink .menu-item__price {
+	font-size: 10px;
+	/* Anpassad textstorlek för priset */
+	color: #f4f3f1;
+}

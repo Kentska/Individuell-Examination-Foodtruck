@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "ES6", // Generera ES6 JavaScript
+    "module": "ESNext", // Använd ES-moduler
+    "jsx": "react-jsx", // Stöd för JSX med React 17+
+    "strict": true, // Aktivera strikt typkontroll
+    "esModuleInterop": true, // Gör det enklare att importera CommonJS-moduler
+    "forceConsistentCasingInFileNames": true, // Förhindra problem med filnamnens versaler/gemener
+    "skipLibCheck": true, // Hoppa över typkontroll av deklarationsfiler (.d.ts)
+    "moduleResolution": "node", // Använd Node.js-modulupplösning
+    "resolveJsonModule": true, // Tillåt import av JSON-filer
+    "isolatedModules": true, // Kräv att varje fil behandlas som en separat modul
+    "outDir": "./dist", // Placera kompilerade filer i dist-katalogen
+    "rootDir": "./src" // Källkodens rotkatalog
+  },
+  "include": ["src/**/*"], // Inkludera alla filer i src-katalogen
+  "exclude": ["node_modules", "dist"] // Exkludera node_modules och dist-katalogen
+}
+
+
