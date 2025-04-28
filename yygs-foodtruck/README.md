@@ -1,4 +1,7 @@
-# Individuell examination: "YYGS" Yum Yum Gimme Sum
+# Foodtruck - Individuell examination: "YYGS" Yum Yum Gimme Sum
+Detta projekt är en individuell examination där syftet är att bygga en modern webbsida för en foodtruck,
+med funktioner som menyhantering, beställning, och leverans samt kvittoinformation.
+Projektet använder sig av
 
 Bakgrund
 Bygga en foodtruckapp som serverar wontons.
