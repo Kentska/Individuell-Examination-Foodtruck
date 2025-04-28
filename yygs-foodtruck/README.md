@@ -1,54 +1,36 @@
-# React + TypeScript + Vite
+# Foodtruck - Individuell examination: "YYGS" Yum Yum Gimme Sum
+Detta projekt är en individuell examination där syftet är att bygga en modern webbsida för en foodtruck
+med funktioner som menyhantering, beställning, leverans samt kvittoinformation.
+Projektet använder sig av React, Redux, Vite och Typescript
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+# Innehåll
+- Menyvisning med dynamiska produkter
+- Varukorg för beställningar
+- Användning av Redux Toolkit för global state-hantering
+- Routing med React Router
+  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# Tekniker
+- Vite  snabb bygg och utvecklingsmiljö för React.
+- React  Bygger gränssnitt och hanterar komponenter.
+- React Router  För hantering av navigering mellan de olika sidorna.
+- Redux Toolkit  Hantera applikationens globala state
+- Redux Store  Centralisera appens data
+- Typescript Säkerställa typkontroll
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+# Kom igång
+Starta projektet lokalt:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+1. Klona repot:
+   ```bash
+   git clone https://github.com/Kentska/Individuell-Examination-Foodtruck.git
+   cd Individuell-Examination-Foodtruck/yygs-foodtruck
+   npm install
+   npm run dev
+   ```
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+
